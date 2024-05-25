@@ -20,17 +20,17 @@
 | 주차  |강의범위 및 내용              | 필기 파일  |
 |----- |--------------------------|---------|
 |제 1주 |Intro. What is git?       ||
-|제 2주 |	Markup Language, 깃 시작하기|https://replit.com/@dlwldn041020/OSS#%EC%88%98%EC%97%85%ED%95%84%EA%B8%B0/w2.txt|
-|제 3주 |버전관리                     |https://replit.com/@dlwldn041020/OSS#%EC%88%98%EC%97%85%ED%95%84%EA%B8%B0/w3.txt|
-|제 4주 |브랜치                       |https://replit.com/@dlwldn041020/OSS#%EC%88%98%EC%97%85%ED%95%84%EA%B8%B0/w4.txt|
-|제 5주 |깃허브                       |https://replit.com/@dlwldn041020/OSS#%EC%88%98%EC%97%85%ED%95%84%EA%B8%B0/w5.txt|
-|제 6주 |깃허브로 협업하기               |https://replit.com/@dlwldn041020/OSS#%EC%88%98%EC%97%85%ED%95%84%EA%B8%B0/w6.txt|
+|제 2주 |	Markup Language, 깃 시작하기|https://replit.com/@dlwldn0410201/OSS#Class/w2.txt|
+|제 3주 |버전관리                     |https://replit.com/@dlwldn0410201/OSS#Class/w3.txt|
+|제 4주 |브랜치                       |https://replit.com/@dlwldn0410201/OSS#Class/w4.txt|
+|제 5주 |깃허브                       |https://replit.com/@dlwldn0410201/OSS#Class/w5.txt|
+|제 6주 |깃허브로 협업하기               |https://replit.com/@dlwldn0410201/OSS#Class/w6.txt|
 |제 7주 |셸 스크립트 기초 문법            |https://replit.com/@dlwldn041020/OSS#%EC%88%98%EC%97%85%ED%95%84%EA%B8%B0/w7.txt|
 |제 8주 |중간고사                      |
-|제 9주 |grep 사용법                   |https://replit.com/@dlwldn041020/OSS#%EC%88%98%EC%97%85%ED%95%84%EA%B8%B0/w9.txt|
+|제 9주 |grep 사용법                   |https://replit.com/@dlwldn0410201/OSS#Class/w9.txt|
 |제 10주|find 사용법                   |
-|제 11주|awk 사용법                    |https://replit.com/@dlwldn041020/OSS#%EC%88%98%EC%97%85%ED%95%84%EA%B8%B0/w11.txt|
-|제 12주|sed 사욥법                    |https://replit.com/@dlwldn041020/OSS#%EC%88%98%EC%97%85%ED%95%84%EA%B8%B0/w12.txt|
+|제 11주|awk 사용법                    |https://replit.com/@dlwldn0410201/OSS#Class/w11.txt|
+|제 12주|sed 사욥법                    |https://replit.com/@dlwldn0410201/OSS#Class/w12.txt|
 |제 13주|date 사용법                   |
 |제 14주|프로젝트                       |
 |제 15주|기말고사                       |
