@@ -20,7 +20,7 @@
 | 주차  |강의범위 및 내용              | 필기 파일  |
 |----- |--------------------------|---------|
 |제 1주 |Intro. What is git?       ||
-|제 2주 |	Markup Language, 깃 시작하기|https://replit.com/@dlwldn0410201/OSS#Class/w2.txt|
+|제 2주 |	Markup Language, 깃 시작하기|[w2]: https://replit.com/@dlwldn0410201/OSS#Class/w2.txt|
 |제 3주 |버전관리                     |https://replit.com/@dlwldn0410201/OSS#Class/w3.txt|
 |제 4주 |브랜치                       |https://replit.com/@dlwldn0410201/OSS#Class/w4.txt|
 |제 5주 |깃허브                       |https://replit.com/@dlwldn0410201/OSS#Class/w5.txt|
