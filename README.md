@@ -29,7 +29,7 @@
 |제 8주 |중간고사                      |
 |제 9주 |grep 사용법                   |[w9](https://replit.com/@dlwldn0410201/OSS#Class/w9.txt)|
 |제 10주|대체공휴일                |
-|제 11주|awk 사용법                    |[ㅈ11](https://replit.com/@dlwldn0410201/OSS#Class/w11.txt)|
+|제 11주|awk 사용법                    |[w11](https://replit.com/@dlwldn0410201/OSS#Class/w11.txt)|
 |제 12주|sed 사욥법                    |[w12](https://replit.com/@dlwldn0410201/OSS#Class/w12.txt)|
 |제 13주|date 사용법                   |
 |제 14주|프로젝트                       |
