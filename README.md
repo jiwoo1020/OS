@@ -31,7 +31,7 @@
 |제 10주|대체공휴일                |
 |제 11주|awk 사용법                    |[w11](https://replit.com/@dlwldn0410201/OSS#Class/w11.txt)|
 |제 12주|sed 사욥법                    |[w12](https://replit.com/@dlwldn0410201/OSS#Class/w12.txt)|
-|제 13주|date 사용법                   |
+|제 13주|date 사용법                   |[w13](https://replit.com/@dlwldn0410201/OSS#w13.txt)
 |제 14주|프로젝트                       |
 |제 15주|기말고사                       |
 
