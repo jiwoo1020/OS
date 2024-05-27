@@ -1,0 +1,209 @@
+# 조건문 
+
+if <조건문> 
+then 
+  <수행문>
+  <...>
+fi
+ - 들여쓰기는 스크립트에서 가독성을 위해 하는게 좋다
+ - if 의 종료 상태(exist status)가 0이 되면 then구문을 탄다
+ - 종료코드
+  - 0 : 성공
+  - 1,2,3,..: 실패(오류 - 매뉴얼에서 확인가능)
+ - 종료 상태 확인하기
+  echo $? 입력했을때 0이면 성공한것
+ - 파이프라인일경우, 
+  프로그램 | 프로그램 | 프로그램 ... | 프로그램 
+   - 마지막 프로그램의 종료상태가 전체 파이프라인의 종료상태가 됨 (앞에 다 실패해도 마지막만 성공하면 된걸로 되니까 프로그램짤때 주의 )
+
+## 참거짓을 판단하는 프로그램
+test (프로그램 grep echo처럼) <True/False 비교문>
+if test "name" = "name"
+> then
+> echo yes
+> fi
+yes
+
+-true일 경우 종료상태 0으로 반환하는 프로그램 
+-비교하는 같다 쓸때 = (하나만 씀)
+-테스트로 판별한 인수, 변수 등은 모두 "" 감싼다
+
+## Q. 이름 변수에 할당하고 빈값인지 확인하는 조건문 작성하기 
+name="이지우"
+if test "$name" = '' (띄워야함) (if test "$name" 도 됨)
+then
+echo empty
+
+## 문자열 비교연산자 
+- 같다 =
+- 다르다 !=
+- if test "$name"
+- -n # is not null
+- -z # is null /zero (빈문자열인지 검사)
+
+if test -z $name
+then
+echo 빈값
+fi
+
+## test 표현식(test 쓴ㄴㄴ게 귀찮음)
+if [ -z $name ] #가장 많이씀
+then
+echo empty
+fi
+
+-[,]로 감싼다. "test" 프로그램 돌리는 표현식 
+- 앞뒤로 공백넣기 
+
+##Q. 표현식으로 바꾸고 종료상태 확인하는 코드
+name="이지우"
+if [ -z $name ]
+then
+echo 빈값
+fi
+echo $?
+
+## 수치비교 
+num1, num2
+-eq : equal
+-gt : greater than
+-lt 
+-ge
+-ne : not equal
+
+[ num1 -eq num2 ]
+
+##Q. count라는 변수 원하는 숫자 넣고, 10보다 작은지 판별하는 조건문 작성
+count=3
+if [ $count -lt 10 ]
+then
+echo yes
+fi
+
+##Q2. 스크립트 : count
+전체인수가 0이 아닐때, "프로그램을 실행합니다" 라는 문구 출력하는 조건문 작성하기 
+(파일하나 만들어야함)
+vi count
+
+## 종료 프로그램 
+exit n 
+- 셸 종료 코드 지정 
+- exit 프로그램을 사용하지 않으면 마지막 프로그램종료 상태가 반환된다. 
+
+count=4
+if [ $count -gt 0 ] && [ $count -lt 10 ]
+then
+  echo 0~10사이 
+  exit 0
+else
+  exit 1
+fi
+
+## else
+if [ ]
+then  #True 무시
+  cmd1
+  cmd2
+else  #무시 True
+  cmd3
+fi
+
+##elif
+if [ ]
+then
+  cmd1
+elif [ ]
+then
+  cmd2
+else
+  cmd3
+fi
+
+#Q. 시간을 기준으로 인사하는 프로그램 만들기 
+파일 열어서 만들기 
+12~9tl 굿모닝 
+9시~5시 굿애프터눈
+5시~12시 굿이브닝
+종료코드 설정 
+#!/bin/bash
+#!/bin/bash
+
+if [ $1 -gt 0 ] %% [ $1 -lt 9 ]
+then
+  echo "good morning"
+  exit 0
+elif [ $1 -lt 17 ]
+then
+  echo "good afternoon"
+  exit 0
+else
+  echo "good evening"
+  exit 0
+fi
+echo $?
+ 
+# 파일비교
+- 파일의 형태, 빈 파일인지, 권한등등 판별하는 연산자
+- 구조 : <옵션> <디렉토리/파일>
+- 종류 :
+ - -d tmp/ : tmp/가 디렉토리인가?
+  [ -d tmp/ ] #true fals가 판별됨
+ - -f : 파일인지 디렉토리인지 판별 
+ - -s : 파일이 비어있지 않은지 
+ - -x : executable
+ - -w : writtable
+ - -r : readable
+ - -e : exists
+
+
+##논리 부정 연산자 
+[ ! -x file ] /이 전체가 아닐때
+
+##
+(조건1) and/or (조건2)
+-a (and)
+-o (or)
+
+ex) [ -r file -a 3 -eq 4 ]
+-and에서 주의할점 
+ - 조건1이 fals면 조건2는 실행안함
+ - 먼저 필터링할걸 조건 1에 넣어야함 
+ -괄호는 이스케이프 해야함
+ -띄어쓰기 주의
+ -A or (B and c) #and가 우선
+
+ ##Q. 0 < $x < 10
+ if [ $x -gt 0 -a $x -lt 10 ]
+ then
+  echo "0~10사이"
+ fi
+ ##Q2. $name이 널값이 아니거나 $file이 읽기가능할 경우
+if [ $name -n -o -r $name]
+then
+  echo yes
+fi
+
+# case 표현식 (조건문이 엄청 많을떄)
+1) jan
+2) feb
+..
+..
+12) dec
+
+case 값
+in
+  패턴 1) cmd1
+         cmd2 ;;  #패턴 1일 경우에 세미콜론 전까지 명령 수행(세미콜론두개 써야함)
+  패턴 2) ...
+  *) 그 외의 값 
+esac #case
+
+- 매칭되는 패턴 없으면 아무것도 실행 안됨 
+
+## Q. count 확장하기 
+- 인수가 없으면 오류로 종료 
+- 인수가 한개면 실행 
+ - 숫자를 받아서 달로 환산하기 
+ -1 - jan
+ 
+- 인수가 2개면 오류로 종료

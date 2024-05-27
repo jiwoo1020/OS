@@ -1,0 +1,54 @@
+#!/bin/bash
+ 
+if [ $# = 0 ]
+then
+  exit 1
+elif [ $# = 1 ] 
+then 
+  case $1 in 
+  1) echo jan;;
+  2) echo feb;;
+  3) echo mar;;
+  4) echo apr;;
+  5) echo may;;
+  6) echo jun;;
+  7) echo jul;;
+  8) echo aug;;
+  9) echo sep;;
+  10) echo oct;;
+  11) echo nov;;
+  12) echo dec;;
+  exit 0
+else 
+exit 2
+fi
+
+Q. 숫자 대문자 소문자 특수문자 판볗ㄹ하는 스크립트 
+[0-9] ) echo "숫자입니다" ;;
+
+### 패턴이 여러개일 경우
+패턴1 | 패턴 2 ) 명령문 ;;
+
+## Q. 시간으로 인사하기 => case로 바꿔보기
+
+if [ ]
+then
+  : #아무것도 안하고싶을때.pass
+else 
+fi
+
+## &&, || 
+- 프로그램1 && 프로그램2 : 1이 성공하면 2를 실행하라 #자체가 if , if안에 쓰면 연산자가 됨 
+- || : 1이 실패하면 2를 실행하라
+Q. file을 정렬하고 file에 저장하라 
+ echo hello && mv file1 file2
+
+if [ 판별1 && 판별2 ] # 1 and 2
+
+## Q. $file 이 존재하지 않으면(empty,null) /etc/passwd를 변수 $file에 할당하라
+if [ -z $file ]
+then 
+file=/etc/passwd
+echo 실행했습니다
+fi 
+- 프로그램1 && 프로그램2 || 프로그램3
