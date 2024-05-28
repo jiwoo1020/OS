@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 날짜를 입력받아(may 27 2024) 유효 유무 판단
-# case 인수개수 3개 아니면 종료코드
+# 인수개수 3개 아니면 종료코드 
 # $# : 인수개수
 month=$1
 day=$2
@@ -42,7 +42,7 @@ else
 								if [ $day -le 28 ]; then
 										echo "$month $day $year"
 								else
-										echo "28까지만 존재하므로 $month $day $year 은(는) 유효하지 않습니다."
+										echo "28일까지만 존재하므로 $month $day $year 은(는) 유효하지 않습니다."
 								fi
 						fi
 						;;
