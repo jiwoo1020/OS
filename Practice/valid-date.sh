@@ -42,12 +42,12 @@ else
 								if [ $day -le 28 ]; then
 										echo "$month $day $year"
 								else
-										echo "28일까지만 존재하므로 $month $day $year 은(는) 유효하지 않습니다."
+										echo "28일까지만 존재해 $month $day $year 은(는) 유효하지 않습니다."
 								fi
 						fi
 						;;
 				*)
-						# 각 월의 일 수 확인
+						# 일 수 확인
 						case $month in
 								"Jan" | "Mar" | "May" | "Jul" | "Aug" | "Oct" | "Dec")
 										if [ $day -le 31 ]; then
@@ -67,7 +67,7 @@ else
 										if [ $day -le 28 ]; then
 												echo "$month $day $year"
 										else
-												echo "28까지만 존재하므로 $month $day $year 은(는) 유효하지 않습니다."
+												echo "28까지만 존재해 $month $day $year 은(는) 유효하지 않습니다."
 										fi
 										;;
 						esac
