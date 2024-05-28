@@ -30,7 +30,7 @@ else
 		# 윤년 여부 확인
 		case $month in
 				"Feb")
-						if [ $year -eq "Feb" ] && [ $((year % 4)) -eq 0 -a $((year % 100)) -ne 0 -o $((year % 400)) -eq 0 ]; then
+						if [ $((year % 4)) -eq 0 -a $((year % 100)) -ne 0 -o $((year % 400)) -eq 0 ]; then
 								# 윤년
 								if [ $day -le 29 ]; then
 										echo "$month $day $year"
