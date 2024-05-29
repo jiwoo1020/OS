@@ -7,7 +7,7 @@ month=$1
 day=$2
 year=$3
 
-if [ ! $# = 3 ]; 
+if [ ! $# = 3 ]
 then
 		echo "입력값 오류"
 		exit 1
