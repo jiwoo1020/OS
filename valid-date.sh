@@ -34,11 +34,11 @@ else
 						if [ $((year % 4)) -eq 0 -a $((year % 100)) -ne 0 -o $((year % 400)) -eq 0 ]
 						then
 								# 윤년
-								if [ $day -le 29 -a $day]
+								if [ $day -le 29 -a $day -ge 1 ]
 								then
 										echo "$month $day $year"
 								else
-										echo "윤년이므로 1일부터 29일까지만 존재해 $month $day $year 은(는) 유효하지 않습니다."
+										echo "윤년이므로 1일부터 29일까지만 존재해 $month $day $year 은(는) 유효하지 않습니다." ]
 								fi
 						else
 								# 윤년이 아님
