@@ -42,7 +42,7 @@ else
 								fi
 						else
 								# 윤년이 아님
-								if [ $day -le 28 ] 
+								if [ $day -le 28 -a $day -ge 1 ] ] 
 								then
 										echo "$month $day $year"
 								else
@@ -54,7 +54,7 @@ else
 						# 일 수 확인
 						case $month in
 								"Jan" | "Mar" | "May" | "Jul" | "Aug" | "Oct" | "Dec")
-										if [ $day -le 31 ]
+										if [ $day -le 31 -a $day -ge 1 ] ]
 										then
 												echo "$month $day $year"
 										else
@@ -62,7 +62,7 @@ else
 										fi
 										;;
 								"Apr" | "Jun" | "Sep" | "Nov")
-										if [ $day -le 30 ] 
+										if [ $day -le 30 -a $day -ge 1 ] ] 
 										then
 												echo "$month $day $year"
 										else
@@ -70,7 +70,7 @@ else
 										fi
 										;;
 								*)
-										if [ $day -le 28 ] 
+										if [ $day -le 28 -a $day -ge 1 ] ] 
 										then
 												echo "$month $day $year"
 										else
