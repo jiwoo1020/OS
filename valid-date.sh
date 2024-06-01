@@ -34,7 +34,7 @@ else
 						if [ $((year % 4)) -eq 0 -a $((year % 100)) -ne 0 -o $((year % 400)) -eq 0 ]
 						then
 								# 윤년
-								if [ $day -le 29 ]
+								if [ $day -le 29 -a $day]
 								then
 										echo "$month $day $year"
 								else
