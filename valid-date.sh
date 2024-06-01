@@ -38,7 +38,7 @@ else
 								then
 										echo "$month $day $year"
 								else
-										echo "윤년이므로 29일까지만 존재해 $month $day $year 은(는) 유효하지 않습니다."
+										echo "윤년이므로 1일부터 29일까지만 존재해 $month $day $year 은(는) 유효하지 않습니다."
 								fi
 						else
 								# 윤년이 아님
@@ -46,7 +46,7 @@ else
 								then
 										echo "$month $day $year"
 								else
-										echo "28일까지만 존재해 $month $day $year 은(는) 유효하지 않습니다."
+										echo "1일부터 28일까지만 존재해 $month $day $year 은(는) 유효하지 않습니다."
 								fi
 						fi
 						;;
@@ -58,7 +58,7 @@ else
 										then
 												echo "$month $day $year"
 										else
-												echo "31일까지만 존재해 $month $day $year 은(는) 유효하지 않습니다."
+												echo "1일부터 31일까지만 존재해 $month $day $year 은(는) 유효하지 않습니다."
 										fi
 										;;
 								"Apr" | "Jun" | "Sep" | "Nov")
@@ -66,7 +66,7 @@ else
 										then
 												echo "$month $day $year"
 										else
-												echo "30일까지만 존재해 $month $day $year 은(는) 유효하지 않습니다."
+												echo "1일부터 30일까지만 존재해 $month $day $year 은(는) 유효하지 않습니다."
 										fi
 										;;
 								*)
@@ -74,7 +74,7 @@ else
 										then
 												echo "$month $day $year"
 										else
-												echo "28까지만 존재해 $month $day $year 은(는) 유효하지 않습니다."
+												echo "1일부터 28까지만 존재해 $month $day $year 은(는) 유효하지 않습니다."
 										fi
 										;;
 						esac
