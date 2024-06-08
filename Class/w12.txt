@@ -80,7 +80,7 @@ git status -s
 1. 현재 디렉토리에서 삭제 -> 커밋
     rm file
     git commit
-2. 깃에서 바로 삭제하기 (unstaging의 의미)
+2. 깃에서 바로 삭제하기 (unstaging의 의미) 
    git rm file
    git commit
 

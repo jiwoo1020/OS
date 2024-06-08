@@ -68,7 +68,8 @@ num1, num2
 -eq : equal
 -gt : greater than
 -lt 
--ge
+-ge : 크거나 같다 
+-le : 작거나 같다
 -ne : not equal
 
 [ num1 -eq num2 ]
@@ -79,6 +80,7 @@ if [ $count -lt 10 ]
 then
 echo yes
 fi
+
 
 ##Q2. 스크립트 : count
 전체인수가 0이 아닐때, "프로그램을 실행합니다" 라는 문구 출력하는 조건문 작성하기 
@@ -150,7 +152,7 @@ echo $?
   [ -d tmp/ ] #true fals가 판별됨
  - -f : 파일인지 디렉토리인지 판별 
  - -s : 파일이 비어있지 않은지 
- - -x : executable
+ - -x : executable 실행가능한지 
  - -w : writtable
  - -r : readable
  - -e : exists
